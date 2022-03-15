@@ -1,17 +1,31 @@
 ﻿// See https://aka.ms/new-console-template for more information
 Console.WriteLine("Hello, World!");
-//Check Year is Leap or not
+//check alphabet is vowel or constant
 
-int year;
-Console.WriteLine("Check weather year is leap or not");
-Console.WriteLine("enter year");
-year = Convert.ToInt32(Console.ReadLine());
+char ch;
+Console.WriteLine("Check whether alphabet vowel or constant");
 
-if (year % 4 == 0 && year % 400 == 0)
+Console.WriteLine("Enter the Alphabet");
+ch = Convert.ToChar(Console.ReadLine());
+
+switch (ch)
 {
-    Console.WriteLine("year is leap year");
-}
-else
-{
-    Console.WriteLine("year is not leap year");
+    case 'a':
+        Console.WriteLine("the alphabet is vowel");
+        break;
+    case 'e':
+        Console.WriteLine("the alphabet is vowel");
+        break;
+    case 'i':
+        Console.WriteLine("the alphabet is vowel");
+        break;
+    case 'o':
+        Console.WriteLine("the alphabet is vowel");
+        break;
+    case 'u':
+        Console.WriteLine("the alphabet is vowel");
+        break;
+    default:
+        Console.WriteLine("the alphabet is constant");
+        break;
 }
