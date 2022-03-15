@@ -1,27 +1,16 @@
 ﻿// See https://aka.ms/new-console-template for more information
 Console.WriteLine("Hello, World!");
-//Largest number among 3 numbers
+// Even Odd Number
 
-Console.WriteLine("Enter value for num1: ");
-int num1 = Convert.ToInt16(Console.ReadLine());
+ 
+Console.WriteLine("enter number:");
+int num = Convert.ToInt32(Console.ReadLine());
 
-Console.WriteLine("Enter value for num2: ");
-int num2 = Convert.ToInt16(Console.ReadLine());
-
-Console.WriteLine("Enter value for num3: ");
-int num3 = Convert.ToInt16(Console.ReadLine());
-
-
-
-if (num1 > num2 && num1 > num3)
+if (num % 2 == 0)
 {
-    Console.WriteLine("num1 is greater");
+    Console.WriteLine("Number is even");
 }
-else if (num2 > num3 && num2 > num1)
+else 
 {
-    Console.WriteLine("num2 is greater");
-}
-else
-{
-    Console.WriteLine("num3 is greater");
+    Console.WriteLine("Number is odd");
 }
