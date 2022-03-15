@@ -1,32 +1,20 @@
 ﻿// See https://aka.ms/new-console-template for more information
 Console.WriteLine("Hello, World!");
-//program for head tail percentage calculation
+//Program Fibonacci series
 
-Console.WriteLine("Let's flip a coin N times");
+int firstNumber = 0, SecondNumber = 1, nextNumber, number;
+Console.Write("Enter the number upto which print the Fibonacci series : ");
+number = int.Parse(Console.ReadLine());
+
+//First print first and second number
+Console.Write(firstNumber + " " + SecondNumber + " ");
+
+nextNumber = firstNumber + SecondNumber;
+//Starts the loop from 2 because 0 and 1 are already printed
+for (int i = 2; nextNumber < number; i++)
 {
-    Random Rand = new Random();
-
-    int heads = 0;
-    int tails = 0;
-    int result = 0;
-    Console.WriteLine("enter how many times coin flip");
-    int N = Convert.ToInt16(Console.ReadLine());
-
-    for (int i = 0; i < N; i++)
-    {
-        result = Rand.Next(0, 2);
-        if (result == 1)
-        {
-            heads++;
-        }
-        else
-        {
-            tails++;
-        }
+    Console.Write(nextNumber + " ");
+    firstNumber = SecondNumber;
+    SecondNumber = nextNumber;
+    nextNumber = firstNumber + SecondNumber;
     }
-
-    Console.WriteLine("heads was flipped {0} times", +heads);
-    Console.WriteLine("tails was flipped {0} times", +tails);
-    return result;
-}
-
