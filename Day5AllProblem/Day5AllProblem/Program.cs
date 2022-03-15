@@ -1,25 +1,25 @@
 ﻿// See https://aka.ms/new-console-template for more information
 Console.WriteLine("Hello, World!");
-//Program For Perfect Number
+//Program For Prime Number
 
-int number, sum = 0, n;
-Console.Write("enter the Number");
-number = int.Parse(Console.ReadLine());
-n = number;
-for (int i = 1; i < number; i++)
+Console.Write("Enter a Number : ");
+int number = int.Parse(Console.ReadLine());
+bool IsPrime = true;
+
+for (int i = 2; i < number / 2; i++)
 {
     if (number % i == 0)
     {
-        sum = sum + i;
+        IsPrime = false;
+        break;
     }
 }
-if (sum == n)
+
+if (IsPrime)
 {
-    Console.WriteLine("\n Entered number is a perfect number");
-    Console.ReadLine();
+    Console.Write("Number is Prime.");
 }
 else
 {
-    Console.WriteLine("\n Entered number is not a perfect number");
-    Console.ReadLine();
+    Console.Write("Number is not Prime.");
 }
