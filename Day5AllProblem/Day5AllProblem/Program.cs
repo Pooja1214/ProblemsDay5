@@ -2,17 +2,18 @@
 Console.WriteLine("Hello, World!");
 //Program For Reverse Number
 
-Console.Write("Enter a Number : ");
-int number = int.Parse(Console.ReadLine());
-int reminder, reverse = 0;
-while (number > 0)
-{
-    //Get the remainder by dividing the number with 10  
-    reminder = number % 10;
-    //multiply the sum with 10 and then add the reminder
-    reverse = (reverse * 10) + reminder;
-    //Get the quotient by dividing the number with 10 
-    number = number / 10;
-}
-Console.WriteLine($"The Reverse order is : {reverse}");
-Console.ReadKey();
+            Stopwatch stopwatch = new Stopwatch();
+            stopwatch.Start();
+
+            // ... This takes 10 seconds to finish.
+            for (int i = 0; i < 1000; i++)
+            {
+                System.Threading.Thread.Sleep(10);
+            }
+
+            // Stop.
+            stopwatch.Stop();
+
+            // Write hours, minutes and seconds.
+            Console.WriteLine("Time elapsed: {0:hh\\:mm\\:ss}", stopwatch.Elapsed);
+    
