@@ -1,16 +1,17 @@
 ﻿// See https://aka.ms/new-console-template for more information
 Console.WriteLine("Hello, World!");
-// Even Odd Number
+//Check Year is Leap or not
 
- 
-Console.WriteLine("enter number:");
-int num = Convert.ToInt32(Console.ReadLine());
+int year;
+Console.WriteLine("Check weather year is leap or not");
+Console.WriteLine("enter year");
+year = Convert.ToInt32(Console.ReadLine());
 
-if (num % 2 == 0)
+if (year % 4 == 0 && year % 400 == 0)
 {
-    Console.WriteLine("Number is even");
+    Console.WriteLine("year is leap year");
 }
-else 
+else
 {
-    Console.WriteLine("Number is odd");
+    Console.WriteLine("year is not leap year");
 }
