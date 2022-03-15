@@ -1,31 +1,18 @@
 ﻿// See https://aka.ms/new-console-template for more information
 Console.WriteLine("Hello, World!");
-//check alphabet is vowel or constant
+//Program for compute Quotient and Remainder
 
-char ch;
-Console.WriteLine("Check whether alphabet vowel or constant");
+int divident, divisor;
+//int quotient, remainder; Declare variables here also
 
-Console.WriteLine("Enter the Alphabet");
-ch = Convert.ToChar(Console.ReadLine());
+Console.WriteLine("Enter Divident");
+divident = Convert.ToInt32(Console.ReadLine());
 
-switch (ch)
-{
-    case 'a':
-        Console.WriteLine("the alphabet is vowel");
-        break;
-    case 'e':
-        Console.WriteLine("the alphabet is vowel");
-        break;
-    case 'i':
-        Console.WriteLine("the alphabet is vowel");
-        break;
-    case 'o':
-        Console.WriteLine("the alphabet is vowel");
-        break;
-    case 'u':
-        Console.WriteLine("the alphabet is vowel");
-        break;
-    default:
-        Console.WriteLine("the alphabet is constant");
-        break;
-}
+Console.WriteLine("Enter Divisor");
+divisor = Convert.ToInt32(Console.ReadLine());
+
+int quotient = divident / divisor;
+int remainder = divident % divisor;
+
+Console.WriteLine("quotient = " + quotient);
+Console.WriteLine("remainder = " + remainder);
