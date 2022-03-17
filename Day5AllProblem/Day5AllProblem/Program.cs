@@ -1,19 +1,19 @@
 ﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
-//Program For Reverse Number
 
-            Stopwatch stopwatch = new Stopwatch();
-            stopwatch.Start();
+//Program  For Power of Two
 
-            // ... This takes 10 seconds to finish.
-            for (int i = 0; i < 1000; i++)
-            {
-                System.Threading.Thread.Sleep(10);
-            }
 
-            // Stop.
-            stopwatch.Stop();
-
-            // Write hours, minutes and seconds.
-            Console.WriteLine("Time elapsed: {0:hh\\:mm\\:ss}", stopwatch.Elapsed);
-    
+int power_2;
+Console.WriteLine("Please enter value of n to print power of 2 table");
+int n = Convert.ToInt32(Console.ReadLine());
+if (n >= 0 && n <= 30)
+{
+    for (int i = 0; i <= n; i++)
+    {
+        power_2 = Convert.ToInt32(Math.Pow(2, i));
+        Console.WriteLine("2^" + i + " : " + power_2);
+    }
+}
+else
+    Console.WriteLine("Please Enter value of n from 0 to 30");
+            
